@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  comment    :string(255)
 #  rating     :integer
+#  product_id :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

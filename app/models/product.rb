@@ -11,6 +11,7 @@
 #  updated_at  :datetime
 #  category_id :integer
 #  user_id     :integer
+#  comment_id  :integer
 #
 
 class Product < ActiveRecord::Base

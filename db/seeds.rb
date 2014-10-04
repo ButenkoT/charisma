@@ -23,15 +23,15 @@ com1 = Comment.create(:comment => "I love this doll.It's amazing")
 com2 = Comment.create(:comment => "This doll is terrible!")
 com3 = Comment.create(:comment => "I adore this art by S.Dali!")
 
-u1.products << [p1]
-u2.products << [p2, p5]
+u1.products << p1
+u2.products << p2 << p5
 
 
-p2.categories << c1
-p3.categories << c4 << c6
-p1.categories << c3
-p4.categories << c5
-p5.categories << c1
+p2.categories << [c1]
+p3.categories << [c4, c6]
+p1.categories << [c3]
+p4.categories << [c5]
+p5.categories << [c1]
 
 p2.comments << [com1, com2]
 p4.comments << [com3]
