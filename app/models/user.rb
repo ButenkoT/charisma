@@ -8,7 +8,6 @@
 #  status          :string(255)
 #  city            :string(255)
 #  country         :string(255)
-#  product_id      :integer
 #  created_at      :datetime
 #  updated_at      :datetime
 #  email           :string(255)

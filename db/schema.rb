@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20141004024249) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,9 +42,7 @@ ActiveRecord::Schema.define(version: 20141004024249) do
     t.string   "size"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "category_id"
     t.integer  "user_id"
-    t.integer  "comment_id"
   end
 
   create_table "users", force: true do |t|
@@ -54,7 +51,6 @@ ActiveRecord::Schema.define(version: 20141004024249) do
     t.string   "status"
     t.string   "city"
     t.string   "country"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"

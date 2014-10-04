@@ -3,8 +3,7 @@ Comment.destroy_all
 Product.destroy_all
 User.destroy_all
 
-u1 = User.create(:name => 'Tanya')
-u2 = User.create(:name => 'Cat')
+
 
 c1 = Category.create(:name => 'Dolls')
 c2 = Category.create(:name => 'Wooden crafts')
@@ -23,8 +22,6 @@ com1 = Comment.create(:comment => "I love this doll.It's amazing")
 com2 = Comment.create(:comment => "This doll is terrible!")
 com3 = Comment.create(:comment => "I adore this art by S.Dali!")
 
-u1.products << p1
-u2.products << p2 << p5
 
 
 p2.categories << [c1]

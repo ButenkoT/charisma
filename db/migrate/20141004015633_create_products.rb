@@ -7,9 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       	t.string :size
       	t.timestamps
 
-      	t.integer :category_id
       	t.integer :user_id
-        t.integer :comment_id
     end
   end
 end

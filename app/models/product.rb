@@ -2,16 +2,14 @@
 #
 # Table name: products
 #
-#  id          :integer          not null, primary key
-#  title       :string(255)
-#  image       :text
-#  price       :integer
-#  size        :string(255)
-#  created_at  :datetime
-#  updated_at  :datetime
-#  category_id :integer
-#  user_id     :integer
-#  comment_id  :integer
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  image      :text
+#  price      :integer
+#  size       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  user_id    :integer
 #
 
 class Product < ActiveRecord::Base

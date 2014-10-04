@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       	t.string :city
       	t.string :country
 
-        t.integer :product_id
+        
       	t.timestamps
     end
   end
