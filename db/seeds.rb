@@ -1,7 +1,40 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.destroy_all
+Comment.destroy_all
+Product.destroy_all
+User.destroy_all
+
+u1 = User.create(:name => 'Tanya')
+u2 = User.create(:name => 'Cat')
+
+c1 = Category.create(:name => 'Dolls')
+c2 = Category.create(:name => 'Wooden crafts')
+c3 = Category.create(:name => 'Embroidery')
+c4 = Category.create(:name => 'Jewelery')
+c5 = Category.create(:name => 'Paintings')
+c6 = Category.create(:name => 'Metal crafts')
+
+p1 = Product.create(:title => 'Horse')
+p2 = Product.create(:title => 'Doll')
+p3 = Product.create(:title => 'Neckless')
+p4 = Product.create(:title => 'S.Dali')
+p5 = Product.create(:title => 'Doll 2')
+
+com1 = Comment.create(:comment => "I love this doll.It's amazing")
+com2 = Comment.create(:comment => "This doll is terrible!")
+com3 = Comment.create(:comment => "I adore this art by S.Dali!")
+
+u1.products << [p1]
+u2.products << [p2, p5]
+
+
+p2.categories << c1
+p3.categories << c4 << c6
+p1.categories << c3
+p4.categories << c5
+p5.categories << c1
+
+p2.comments << [com1, com2]
+p4.comments << [com3]
+
+
+
