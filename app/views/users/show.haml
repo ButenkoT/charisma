@@ -2,5 +2,13 @@
 %p
   User since:
   = @user.created_at.strftime '%B %m %Y'
+%p
+  Lives in:
+  = @user.city + ','
+  = @user.country
+%p
+  Status:
+  = @user.status
 
 = image_tag @user.avatar
+

@@ -1,0 +1,20 @@
+%h2= @product.title
+
+%p
+  = image_tag @product.image
+
+%p
+  Price:
+  = @product.price
+
+%p
+  Size:
+  = @product.size
+
+%p
+  Owner:
+  = link_to @product.user_id
+
+%p
+  Category:
+  = @product.categories
