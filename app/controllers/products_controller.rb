@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
 	end
 
 	def show
+    @users = User.all
 		@product = Product.find params[:id]
 	end
 
@@ -18,7 +19,7 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.new product_params
-    product.user_id = @current_user.id
+    @product.user_id = @current_user.id
     product.save
     redirect_to product 
   end

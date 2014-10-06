@@ -15,7 +15,7 @@
 
 %p
   Owner:
-  = link_to @product.user_id , @user
+  = link_to(@product.user.name, @product.user)
 
 %p
   
