@@ -13,13 +13,12 @@
 
   %div
     = f.label :category
-    = select_tag "Category", options_from_collection_for_select(Category.all, "id", "name"), :include_blank => true
+    = select_tag 'product[category_ids]', options_from_collection_for_select(Category.all, "id", "name"), :include_blank => true, :multiple => true
 
 
   %div
     = f.label :image
     = f.url_field :image
-
 
   %label
   = f.submit

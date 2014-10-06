@@ -19,10 +19,11 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.new product_params
-    @product.user_id = @current_user.id
+    product.user_id = @current_user.id
     product.save
     redirect_to product 
   end
+
 
   def edit
     @product = Product.find params[:id]
@@ -42,7 +43,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:title, :price, :size,  :image, :category_id, :user_id)
+    params.require(:product).permit(:title, :price, :size,  :image, :user_id, :category_ids => [])
   end
 
 end

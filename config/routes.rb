@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   
   resources :categories, :products, :except => [:mine]
 
-
-
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
