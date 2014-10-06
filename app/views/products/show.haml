@@ -24,12 +24,12 @@
   - @product.categories.each do |category|
     %li= link_to category.name, category
    
+- if @product.user.id == @current_user.id
+  %p
+    = link_to('Edit', edit_product_path(@product))
 
-%p
-  = link_to('Edit', edit_product_path(@product))
-
-%p
-  = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
+  %p
+    = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
 
 %p
   = link_to('All products', products_path)
