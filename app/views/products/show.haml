@@ -1,3 +1,5 @@
+
+
 %h2= @product.title
 
 %p
@@ -5,7 +7,7 @@
 
 %p
   Price:
-  = @product.price
+  = number_to_currency(@product.price)
 
 %p
   Size:
@@ -13,8 +15,21 @@
 
 %p
   Owner:
-  = link_to @product.user_id
+  = link_to @product.user_id , @user
 
 %p
+  
   Category:
-  = @product.categories
+  %ul
+  - @product.categories.each do |category|
+    %li= link_to category.name, category
+   
+
+%p
+  = link_to('Edit', edit_product_path(@product))
+
+%p
+  = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
+
+%p
+  = link_to('All products', products_path)

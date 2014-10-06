@@ -1,0 +1,25 @@
+= form_for @product do |f|
+  %div
+    = f.label :title
+    = f.text_field :title, :autofocus => true
+
+  %div
+    = f.label :price
+    = f.text_field :price
+
+  %div
+    = f.label :size
+    = f.text_field :size
+
+  %div
+    = f.label :category
+    = select_tag "Category", options_from_collection_for_select(Category.all, "id", "name"), :include_blank => true
+
+
+  %div
+    = f.label :image
+    = f.url_field :image
+
+
+  %label
+  = f.submit
