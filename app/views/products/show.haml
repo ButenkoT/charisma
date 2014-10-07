@@ -38,9 +38,9 @@
   = link_to('All products', products_path)
 
 .comments
-
-  = @product.comments.count
+ 
   %p
+    = @product.comments.count
     Comments:
     %ul
     - @product.comments.each do |comment|
@@ -50,12 +50,14 @@
             = link_to(comment.user.name, comment.user)
           = comment.body
 
-  = form_for ([@product, @product.comments.build]) do |f|
-    %div
-      = f.label :body
-      = f.text_area :body, :cols => "80", :rows => "5", :autofocus => true
+  - if @current_user && (@current_user.id != @product.user.id)
 
-    %label
-    = f.submit "comment"
+    = form_for ([@product, @product.comments.new]) do |f|
+      %div
+        = f.label :body
+        = f.text_area :body, :cols => "80", :rows => "5", :autofocus => true
+
+      %label
+      = f.submit "comment"
     
   

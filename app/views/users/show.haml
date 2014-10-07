@@ -17,15 +17,17 @@
 
 = image_tag @user.avatar
 
-%p
-  = link_to 'Add product', new_product_path
-
 - if @user.products
   %p
     Products:
     %ul
       - @user.products.each do |product|
         %li= link_to product.title, product
-  
-%p
-  = link_to 'Edit profile', edit_user_path
+
+
+- if @current_user && (@current_user.id == @user.id)
+  %p
+    = link_to 'Add product', new_product_path
+ 
+  %p
+    = link_to 'Edit profile', edit_user_path
