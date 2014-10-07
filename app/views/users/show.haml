@@ -4,16 +4,23 @@
   = @user.created_at.strftime '%B %m %Y'
 
 
--if @user.city
+- if @user.city
   %p
     Lives in:
     = @user.city + ','
     = @user.country
 
--if @user.status
+- if @user.status
   %p
     Status:
     = @user.status
 
 = image_tag @user.avatar
 
+- if @user.products
+  %p
+    Products:
+    %ul
+      - @user.products.each do |product|
+        %li= link_to product.title, product
+  
