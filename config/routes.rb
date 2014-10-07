@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   # get '/categories/:id' => 'categories#show', :as => 'category/<%= @category.title %>'
 
   
-  resources :categories, :products, :except => [:mine]
+  resources :categories
+  resources :products do
+    resources :comments, only: [:index, :new, :create]
+  end
+
+  resources :comments, only: [:show, :edit, :update, :destroy]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

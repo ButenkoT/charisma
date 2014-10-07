@@ -5,7 +5,7 @@ module ApplicationHelper
     if @current_user.present?
       nav += "<li>Hello #{ @current_user.name }</li> "
       nav += "<li>" + link_to('All users', users_path) + "</li> "
-      nav += "<li>" + link_to('Edit profile', edit_user_path) + "</li> "
+      nav += "<li>" + link_to('Your profile', user_path(@current_user)) + "</li> "
       nav += "<li>#{ link_to('Sign out', login_path, :method => :delete, :data => {:confirm => 'Are you sure?'}) }</li> "
       nav += "<li>" + link_to('Add product', new_product_path) + "</li> "
     else
