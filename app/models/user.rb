@@ -20,7 +20,9 @@ class User < ActiveRecord::Base
 	
     has_many :products
     has_many :categories, :through => :products
-    has_many :comments, :through => :products 
+    has_many :comments 
+
+    
 
   	validates :name, :presence => true, :uniqueness => true, :length => {:minimum => 2}
   	validates :email, :presence => true, :uniqueness => true

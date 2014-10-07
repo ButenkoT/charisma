@@ -19,7 +19,6 @@
     = f.label :category
     = select_tag 'product[category_ids]', options_from_collection_for_select(Category.all, "id", "name"), :include_blank => true, :multiple => true
 
-
   %div
     = f.label :image
     = f.url_field :image

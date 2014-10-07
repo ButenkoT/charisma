@@ -1,10 +1,9 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-    	t.string :comment
-    	t.integer :rating
-
-    	t.integer :product_id
+    	t.text :body
+    	t.references :product, index: true
+      
     	t.timestamps
     end
   end

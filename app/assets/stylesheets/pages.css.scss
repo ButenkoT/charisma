@@ -8,9 +8,9 @@ body:before{
   display: block;
   background-image: url('background.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
-  min-width: 1200px;
-  min-height: 800px;
+  background-repeat: repeat;
+  min-width: 800px;
+  min-height: 700px;
   
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
@@ -19,11 +19,8 @@ body:before{
   filter: blur(3px);
 }
 
-
-
 body {
   margin: 0;
-  position: fixed;
   left: 0;
   right: 0;
   z-index: 0;
@@ -61,6 +58,7 @@ nav a {
   margin-top: 30px;
   padding: 30px;
   background-color: rgba(255,255,255,0.6);
+  min-height: 1000px;
 }
 
 .field_with_errors {
@@ -82,4 +80,13 @@ img{
   border-radius: 100%;
   max-width: 100px;
   border: 1px solid black;
+}
+
+p{
+  display:inline-block;
+}
+
+.comment{
+  display:inline-block;
+  vertical-align: top;
 }

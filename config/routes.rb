@@ -10,10 +10,9 @@ Rails.application.routes.draw do
   
   resources :categories
   resources :products do
-    resources :comments, only: [:index, :new, :create]
+    resources :comments 
   end
-
-  resources :comments, only: [:show, :edit, :update, :destroy]
+  
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

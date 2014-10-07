@@ -3,14 +3,15 @@
 # Table name: comments
 #
 #  id         :integer          not null, primary key
-#  comment    :string(255)
-#  rating     :integer
+#  body       :text
 #  product_id :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 
 class Comment < ActiveRecord::Base
 	belongs_to :product
-	has_many :users, :through => :products
+	belongs_to :user
+
 end

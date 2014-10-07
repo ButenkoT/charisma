@@ -12,9 +12,9 @@ c4 = Category.create(:name => 'Jewelery')
 c5 = Category.create(:name => 'Paintings')
 c6 = Category.create(:name => 'Metal crafts')
 
-com1 = Comment.create(:comment => "I love this doll.It's amazing")
-com2 = Comment.create(:comment => "This doll is terrible!")
-com3 = Comment.create(:comment => "I adore this art by S.Dali!")
+com1 = Comment.create(:body => "I love this doll.It's amazing")
+com2 = Comment.create(:body => "This doll is terrible!")
+com3 = Comment.create(:body => "I adore this art by S.Dali!")
 
 
 
