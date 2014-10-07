@@ -17,6 +17,9 @@
 
 = image_tag @user.avatar
 
+%p
+  = link_to 'Add product', new_product_path
+
 - if @user.products
   %p
     Products:

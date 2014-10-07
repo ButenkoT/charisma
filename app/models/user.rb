@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  name            :string(255)
-#  image           :text
+#  description     :text
 #  status          :string(255)
 #  city            :string(255)
 #  country         :string(255)

@@ -9,10 +9,6 @@ class ProductsController < ApplicationController
 		@product = Product.find params[:id]
 	end
 
-  def mine
-    @products = Product.where(:user_id => @current_user.id)
-  end
-
   def new
     @product = Product.new
   end
