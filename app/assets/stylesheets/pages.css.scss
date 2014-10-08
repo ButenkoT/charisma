@@ -95,7 +95,7 @@ nav a {
   margin-top:60px;
   padding: 10px;
   background-color: rgba(255,255,255,0.6);
-  min-height: 800px;
+  min-height: 500px;
 }
 
 .field_with_errors {
@@ -111,6 +111,7 @@ label {
   display: inline-block;
   min-width: 150px;
   text-align: right;
+  height:30px;
 }
 
 .avatar img{
@@ -120,8 +121,9 @@ label {
 }
 
 .comments{
-  display:inline-block;
   vertical-align: top;
+  text-align:center;
+  margin: 20px 0;
 }
 
 .main_page_photo{
@@ -269,18 +271,6 @@ h2{
   color:rgb(137, 40, 37);
 }
 
-.linking_button{
-  display:inline-block;
-  border:1px solid purple;
-  padding:3px;
-  margin:3px;
-  background-color:#FA4948;
-  border-radius:2px;
-}
-
-.linking_button:hover{
-  box-shadow:3px 3px #F29087;
-}
 
 .profile_right a{
   color:rgb(90, 91, 46);
@@ -290,4 +280,69 @@ h2{
 .profile_right a:hover{
   font-size: 21px;
   color:rgb(62, 63, 39);
+}
+
+.new_edit_form{
+  display: inline-block;
+  margin-left:200px;
+}
+
+.product img{
+  max-width:600px;
+  max-height:700px;
+  box-shadow:3px 3px #9C2FB5;
+}
+
+.show_product_left{
+  display: inline-block;
+  padding:10px;
+}
+
+.show_product_right{
+  display:inline-block;
+  vertical-align:top;
+  margin-left:60px;
+  padding:10px;
+  max-width: 300px;
+  max-height: 700px;
+  margin-top:70px;
+  font-size:20px;
+}
+
+.show_product_right a{
+  color:rgb(90, 91, 46);
+  
+}
+
+.show_product_right a:hover{
+  font-size: 21px;
+  color:rgb(62, 63, 39);
+}
+
+
+.linking_button, button{
+  font-size:20px;
+  display:inline-block;
+  border:1px solid purple;
+  padding:3px;
+  margin:3px;
+  background-color:#FA4948;
+  border-radius:2px;
+  height:25px;
+  width:85px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.linking_button:hover, button:hover{
+  box-shadow:3px 3px #F29087;
+}
+
+.show_product_right .inside_product a{
+  color: black;
+}
+.show_product_right .inside_product a{
+  color: black;
+  font-size:20px;
 }

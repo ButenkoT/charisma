@@ -1,50 +1,48 @@
 
+.show_product_left
+  %h2= @product.title
 
-%h2= @product.title
+  .product
+    = image_tag @product.image
 
-%p
-  = image_tag @product.image
-
-%p
-  Price:
-  = number_to_currency(@product.price)
-
-%p
-  Size:
-  = @product.size
-
-%p
-  Description:
-  = @product.description
-
-%p
-  Owner:
-  = link_to(@product.user.name, @product.user)
-
-%p
-  Category:
-  %ul
-  - @product.categories.each do |category|
-    %li= link_to category.name, category
-   
-- if @current_user && (@product.user.id == @current_user.id)
+.show_product_right
   %p
-    = link_to('Edit', edit_product_path(@product))
+    Price:
+    = number_to_currency(@product.price)
 
   %p
-    = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
+    Size:
+    = @product.size
 
-- if !@current_user
-  = link_to('Buy', login_path)
--else
-  - if @product.user.id != @current_user.id
-    .buy
-      %button.buy{'data-product' => @product.id, 'data-name'=> @product.title, 'data-price' => @product.price} Buy
+  %p
+    Description:
+    = @product.description
 
+  %p
+    Owner:
+    = link_to(@product.user.name, @product.user)
 
+  %p
+    Category:
+    %ul
+    - @product.categories.each do |category|
+      %li= link_to category.name, category
+  
+  .inside_product 
+    - if @current_user && (@product.user.id == @current_user.id)
+      .linking_button
+        = link_to('Edit', edit_product_path(@product))
+      .linking_button
+        = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
 
-%p
-  = link_to('All products', products_path)
+    - if !@current_user
+      = link_to('Buy', login_path)
+    -else
+      - if @product.user.id != @current_user.id
+        .buy
+          %button.buy{'data-product' => @product.id, 'data-name'=> @product.title, 'data-price' => @product.price} Buy
+    .linking_button
+      = link_to('All items', products_path)
 
 .comments
  
