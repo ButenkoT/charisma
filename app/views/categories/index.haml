@@ -1,5 +1,15 @@
+.category
+  .category_image.one
+  .category_image.two
+  .category_image.three
 
-%h2 Categories
-%ul
-- @categories.each do |category|
-  %li= link_to category.name, category
+.lists
+  %h2 Categories
+  %ul
+  - @categories.each do |category|
+    %li= link_to category.name, category
+
+.category    
+  .category_image.four
+  .category_image.five
+  .category_image.six
