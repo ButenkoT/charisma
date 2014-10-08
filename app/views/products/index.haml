@@ -1,4 +1,10 @@
-%h2 Products
-%ul
-- @products.each do |product|
-  %li= link_to product.title, product
+.show_all
+  .head
+    %h2 Products
+  
+  %ul
+  - @products.each do |product|
+    .inside_product
+      %li= link_to product.title, product
+      .special
+        = link_to image_tag(product.image), product

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20141007040335) do
     t.datetime "updated_at"
     t.string   "email"
     t.string   "password_digest"
-    t.text     "avatar",          default: "http://derpreview.files.wordpress.com/2012/01/harpo-marx-02.jpg"
+    t.text     "avatar",          default: "avatar.jpg"
   end
 
 end

@@ -1,4 +1,9 @@
-%h2 Our beloved users
-%ul
-- @users.each do |user|
-  %li= link_to user.name, user
+.show_all
+  .head
+    %h2 Our beloved users
+  %ul
+  - @users.each do |user|
+    .inside_product
+      %li= link_to user.name, user
+      .special
+        = image_tag user.avatar

@@ -12,7 +12,7 @@
 #  updated_at      :datetime
 #  email           :string(255)
 #  password_digest :string(255)
-#  avatar          :text             default("http://derpreview.files.wordpress.com/2012/01/harpo-marx-02.jpg")
+#  avatar          :text             default("avatar.jpg")
 #
 
 class User < ActiveRecord::Base

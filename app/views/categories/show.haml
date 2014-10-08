@@ -1,9 +1,14 @@
-%h2= @category.name
+.show_all
+  .head
+    %h2= @category.name
 
-- @category.products.each do |product|
   %ul
-    %li= image_tag product.image
-    %li= link_to product.title, product
+  - @category.products.each do |product|
+    .inside_product   
+      %li= link_to product.title, product
+      .special
+        = link_to image_tag(product.image), product
 
-%p
-  = link_to('All categories', categories_path)
+  %p
+    .linking_button
+      = link_to('All categories', categories_path)
