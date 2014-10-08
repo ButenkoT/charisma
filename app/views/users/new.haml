@@ -1,24 +1,26 @@
-- if @user.errors.any?
-  %ol
-    - @user.errors.full_messages.each do |msg|
-      %li= msg
 
-= form_for @user do |f|
-  %div
-    = f.label :name
-    = f.text_field :name, :autofocus => true
+.new_edit_form
+  - if @user.errors.any?
+    %ol
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
 
-  %div
-    = f.label :email
-    = f.email_field :email
+  = form_for @user do |f|
+    %div
+      = f.label :name
+      = f.text_field :name, :autofocus => true
 
-  %div
-    = f.label :password
-    = f.password_field :password
+    %div
+      = f.label :email
+      = f.email_field :email
 
-  %div
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation
+    %div
+      = f.label :password
+      = f.password_field :password
 
-  %label
-  = f.submit
+    %div
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+
+    %label
+    = f.submit

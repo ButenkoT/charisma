@@ -10,7 +10,7 @@ body:before{
   background-size: cover;
   background-repeat: repeat;
   min-width: 800px;
-  min-height: 700px;
+  min-height: 800px;
   
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
@@ -111,8 +111,8 @@ nav a {
 }
 
 .field_with_errors input {
-  background-color: green;
-  color: red;
+  background-color: rgba(246, 186, 148, 0.6);
+  color: rgb(72, 26, 84);
 }
 
 label {
