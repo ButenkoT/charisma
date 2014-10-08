@@ -7,23 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<nav>
-  <div class="container">
-    <ul>
-      <li><%= link_to('Home', root_path) %></li>
-      <li><%= link_to('Categories', categories_path) %></li>
-      <li><%= link_to('Products', products_path) %></li>
+<header>
+  <nav class='main_nav'>
+      <ul>
+        <li><%= link_to('Home', root_path) %></li>
+        <li><%= link_to('Categories', categories_path) %></li>
+        <li><%= link_to('Products', products_path) %></li>
+      </ul>
+    <div class="user_nav">
       <%== intellinav %>
-    </ul>
-  </div>
-</nav>
-
+    </div>
+  </nav>
+</header>
 <div class="container main">
   <%= yield %>
 </div>
 
-<footer>&copy; T.Butenko 2014</footer>
+<footer>&copy; 2014 T.Butenko </footer>
 
 <script type="text/javascript">
   $(function() {
