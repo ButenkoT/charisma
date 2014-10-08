@@ -34,6 +34,15 @@
   %p
     = link_to('Delete', @product, :method => :delete , :data => {:confirm => 'Are you sure?'})
 
+- if !@current_user
+  = link_to('Buy', login_path)
+-else
+  - if @product.user.id != @current_user.id
+    .buy
+      %button.buy{'data-product' => @product.id, 'data-name'=> @product.title, 'data-price' => @product.price} Buy
+
+
+
 %p
   = link_to('All products', products_path)
 

@@ -35,7 +35,8 @@ group :development do
   gem 'pry-stack_explorer'
 
   gem 'annotate'
-
+  
+  gem 'stripe'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
