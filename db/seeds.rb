@@ -3,8 +3,6 @@ Comment.destroy_all
 Product.destroy_all
 User.destroy_all
 
-
-
 c1 = Category.create(:name => 'Dolls')
 c2 = Category.create(:name => 'Wooden carvings')
 c3 = Category.create(:name => 'Embroidery')

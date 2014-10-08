@@ -85,7 +85,6 @@ nav a {
   position:relative;
   max-width: 960px;
   margin: auto;
-  border:1px dashed green;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
@@ -114,7 +113,7 @@ label {
   text-align: right;
 }
 
-avatar{
+.avatar img{
   border-radius: 100%;
   max-width: 100px;
   border: 1px solid black;
@@ -241,4 +240,54 @@ h2{
   -o-transform: rotate(8deg);
   -ms-transform: rotate(8deg);
   transform: rotate(8deg);
+}
+
+.profile_left{
+  background-image: url('frame.png');
+  width:270px;
+  display:inline-block;
+  margin:20px;
+  padding:5px;
+  padding-bottom:50px;
+  background-size:280px 425px;
+  text-align:center;
+  background-repeat:no-repeat;
+}
+
+.profile_right{
+  display:inline-block;
+  vertical-align:top;
+  margin-top:20px;
+  margin-left:50px;
+  min-width:200px;
+  font-size:20px;
+  text-align:left;
+  list-style:none;
+}
+
+.profile_left h2{
+  color:rgb(137, 40, 37);
+}
+
+.linking_button{
+  display:inline-block;
+  border:1px solid purple;
+  padding:3px;
+  margin:3px;
+  background-color:#FA4948;
+  border-radius:2px;
+}
+
+.linking_button:hover{
+  box-shadow:3px 3px #F29087;
+}
+
+.profile_right a{
+  color:rgb(90, 91, 46);
+  
+}
+
+.profile_right a:hover{
+  font-size: 21px;
+  color:rgb(62, 63, 39);
 }
