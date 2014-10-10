@@ -44,6 +44,10 @@
     .linking_button
       = link_to('All items', products_path)
 
+%form{:action => "", :method => :post}
+  %script{:src => "https://checkout.stripe.com/checkout.js", :class => "stripe-button", :"data-key" => "pk_test_1RUHmTu8c2nR2F2UPOqV1Bof", :"data-amount" => @product.price*100, :"data-name" => "Charisma", :"data-description" => @product.title + ' $' + @product.price.to_s, :"data-image" => @product.image}
+
+
 .comments
  
   %p
@@ -57,7 +61,7 @@
             = link_to(comment.user.name, comment.user)
           = comment.body
 
-  - if @current_user && (@current_user.id != @product.user.id)
+  - if @current_user
 
     = form_for ([@product, @product.comments.new]) do |f|
       %div
@@ -65,6 +69,4 @@
         = f.text_area :body, :cols => "80", :rows => "5", :autofocus => true
 
       %label
-      = f.submit "comment"
-    
-  
+      = f.submit "comment"  
