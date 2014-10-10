@@ -70,6 +70,8 @@ GEM
     debugger-ruby_core_source (1.3.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -182,6 +184,7 @@ DEPENDENCIES
   binding_of_caller
   closure_tree
   coffee-rails (~> 4.0.0)
+  font-awesome-sass
   haml
   jbuilder (~> 2.0)
   jquery-rails

@@ -39,13 +39,11 @@
       = link_to('Buy', login_path)
     -else
       - if @product.user.id != @current_user.id
-        .buy
-          %button.buy{'data-product' => @product.id, 'data-name'=> @product.title, 'data-price' => @product.price} Buy
+        %form{:action => "", :method => :post}
+          %script{:src => "https://checkout.stripe.com/checkout.js", :class => "stripe-button", :"data-key" => "pk_test_1RUHmTu8c2nR2F2UPOqV1Bof", :"data-amount" => @product.price*100, :"data-name" => "Charisma", :"data-description" => @product.title + ' $' + @product.price.to_s, :"data-image" => @product.image}
+
     .linking_button
       = link_to('All items', products_path)
-
-%form{:action => "", :method => :post}
-  %script{:src => "https://checkout.stripe.com/checkout.js", :class => "stripe-button", :"data-key" => "pk_test_1RUHmTu8c2nR2F2UPOqV1Bof", :"data-amount" => @product.price*100, :"data-name" => "Charisma", :"data-description" => @product.title + ' $' + @product.price.to_s, :"data-image" => @product.image}
 
 
 .comments
