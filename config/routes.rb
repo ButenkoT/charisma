@@ -3,10 +3,6 @@ Rails.application.routes.draw do
 
   get '/users/edit' => 'users#edit', :as => :edit_user
   resources :users, :except => [:edit]
-
-  # get '/categories' => 'categories#index'
-  # get '/categories/:id' => 'categories#show', :as => 'category/<%= @category.title %>'
-
   
   resources :categories
   resources :products do

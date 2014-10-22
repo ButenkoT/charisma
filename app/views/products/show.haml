@@ -40,7 +40,7 @@
     -else
       - if @product.user.id != @current_user.id
         %form{:action => "", :method => :post}
-          %script{:src => "https://checkout.stripe.com/checkout.js", :class => "stripe-button", :"data-key" => "pk_test_1RUHmTu8c2nR2F2UPOqV1Bof", :"data-amount" => @product.price*100, :"data-name" => "Charisma", :"data-description" => @product.title + ' $' + @product.price.to_s, :"data-image" => @product.image}
+          %script{:src => "https://checkout.stripe.com/checkout.js", :class => "stripe-button", :"data-key" => "pk_test_1RUHmTu8c2nR2F2UPOqV1Bof", :"data-amount" => @product.price.to_f, :"data-name" => "Charisma", :"data-description" => @product.title + ' $' + @product.price.to_s, :"data-image" => @product.image}
 
     .linking_button
       = link_to('All items', products_path)
@@ -63,7 +63,7 @@
 
     = form_for ([@product, @product.comments.new]) do |f|
       %div
-        = f.label :body
+        
         = f.text_area :body, :cols => "80", :rows => "5", :autofocus => true
 
       %label
